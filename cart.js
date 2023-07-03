@@ -35,7 +35,8 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const summedPrice = cart.reduce((acc, sum) => acc + sum.price, 0);
+// console.log(summedPrice);
 
 
 //////////////////PROBLEM 2////////////////////
@@ -54,7 +55,11 @@ const cart = [
 */
 
 //CODE HERE
-
+const calcFinalPrice = (cartTotal, couponValue, tax) => {
+    const aferTax = cartTotal + cartTotal * tax
+    return aferTax - couponValue
+}
+// console.log(calcFinalPrice(10, 1, 0.6));
 
 
 //////////////////PROBLEM 3////////////////////
@@ -79,7 +84,7 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
-
+    Name, phone, address, and occasionally zip code are the pieces of information restaurants need about their customers. Name, phone number, and address are all of the string type, whereas the zip code is of the int type.
 */
 
 /*
@@ -88,3 +93,9 @@ const cart = [
 */
 
 //CODE HERE
+const customer = {
+    name: "Bruce Wayne",
+    phone: "1234567890",
+    address: "1007 Mountain Drive, Gotham",
+    zipCode: 55905,
+  };
